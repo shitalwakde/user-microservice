@@ -72,7 +72,7 @@ resource "aws_security_group" "instances" {
 
 # 3. s3 bucket
 resource "aws_s3_bucket" "example" {
-  bucket = "abhisheksterraform2023project"
+  bucket = "${var.app_name}terraformproject"
 }
 
 # 6. EC2 Instances for Each Environment
