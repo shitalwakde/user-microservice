@@ -70,6 +70,11 @@ resource "aws_security_group" "instances" {
   }
 }
 
+# 3. s3 bucket
+resource "aws_s3_bucket" "example" {
+  bucket = "abhisheksterraform2023project"
+}
+
 # 6. EC2 Instances for Each Environment
 resource "aws_instance" "servers" {
   for_each = var.envs
